@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>测试 | 刘君盛</title>
+  <title>android studio中找不到“sync the project with gradle files”按钮时的操作 | 刘君盛</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="测试">
+  <meta name="description" content="android studio中找不到“sync the project with gradle files”按钮时的操作  打开Gradle工具窗口 View -&amp;gt; Tool Windows -&amp;gt; Gradle 使用开始宏录制 Edit -&amp;gt; Macros -&amp;gt; Start Recording Macro 在Gradle工具窗口中按下Refresh all Gradle p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android studio中找不到“sync the project with gradle files”按钮时的操作">
 <meta property="og:url" content="http://yoursite.com/2018/01/12/测试/index.html">
 <meta property="og:site_name" content="刘君盛">
-<meta property="og:updated_time" content="2018-01-12T09:45:46.707Z">
+<meta property="og:description" content="android studio中找不到“sync the project with gradle files”按钮时的操作  打开Gradle工具窗口 View -&amp;gt; Tool Windows -&amp;gt; Gradle 使用开始宏录制 Edit -&amp;gt; Macros -&amp;gt; Start Recording Macro 在Gradle工具窗口中按下Refresh all Gradle p">
+<meta property="og:updated_time" content="2018-01-12T10:01:13.722Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试">
+<meta name="twitter:title" content="android studio中找不到“sync the project with gradle files”按钮时的操作">
+<meta name="twitter:description" content="android studio中找不到“sync the project with gradle files”按钮时的操作  打开Gradle工具窗口 View -&amp;gt; Tool Windows -&amp;gt; Gradle 使用开始宏录制 Edit -&amp;gt; Macros -&amp;gt; Start Recording Macro 在Gradle工具窗口中按下Refresh all Gradle p">
   
   
     <link rel="icon" href="/favicon.png">
@@ -109,7 +112,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      测试
+      android studio中找不到“sync the project with gradle files”按钮时的操作
     </h1>
   
 
@@ -117,12 +120,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="android-studio中找不到“sync-the-project-with-gradle-files”按钮时的操作"><a href="#android-studio中找不到“sync-the-project-with-gradle-files”按钮时的操作" class="headerlink" title="android studio中找不到“sync the project with gradle files”按钮时的操作"></a>android studio中找不到“sync the project with gradle files”按钮时的操作</h4><hr>
+<ol>
+<li>打开Gradle工具窗口 <code>View -&gt; Tool Windows -&gt; Gradle</code></li>
+<li>使用开始宏录制 <code>Edit -&gt; Macros -&gt; Start Recording Macro</code></li>
+<li>在Gradle工具窗口中按下<code>Refresh all Gradle projects</code>按钮</li>
+<li>用宏停止宏录制 <code>Edit -&gt; Macros -&gt; Stop Recording Macro</code></li>
+<li>用名字保存宏 <code>Gradle sync</code></li>
+<li>在IntelliJ IDEA工具栏上用鼠标右键按下并选择 <code>Customize Menus and Toolbars...</code></li>
+<li>在<code>Main menu -&gt; Edit -&gt; Macros -&gt; Macro Actions</code>找到您的<code>Gradle sync</code>宏，选择它，然后按<code>Edit Action Icon...</code></li>
+<li>下载此图标<a href="http://developer.android.com/images/tools/sync-project.png" target="_blank" rel="noopener">同步项目与Gradle文件图标</a>（从文档<a href="http://developer.android.com/google/play-services/setup.html" target="_blank" rel="noopener">http://developer.android.com/google/play-services/setup.html</a>），并在IDEA对话框窗口中选择此图标</li>
+<li>现在在组中<code>Menus and Toolbars</code>选择最后一项<code>Main Toolbar</code>，按<code>Add After...</code>并选择<code>All actions -&gt; Macros -&gt; Gradle sync</code></li>
+<li>现在你有<code>Sync Project with Gradle Files</code>按钮！</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2018/01/12/测试/" data-id="cjcbqzdob0001b4rbr95g0ovh" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2018/01/12/测试/" data-id="cjcbr78sd0001nkrbzn5noh7g" class="article-share-link">Share</a>
       
 
       
