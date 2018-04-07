@@ -3,14 +3,43 @@
 <head>
   <meta charset="utf-8">
   
-  <title>技术笔记</title>
+  <title>python 使用pyqt进行gui开发 | 技术笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="技术笔记">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="python 使用pyqt进行gui开发开发环境：MAC OS 10.12.3 版本 （当前最新）Pycharm 2016.3.2 版本 （当前最新）Python 3.6.0 版本 （当前最新）PyQt5 5.8.1 版本 （当前最新）pyinstaller：将python代码打包为可执行的exe文件。  exe文件给Windows用，但是本章不安装，但是不排除后期更新文章，因为博主还没入门，还没">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python 使用pyqt进行gui开发">
+<meta property="og:url" content="http://yoursite.com/2018/04/07/python-使用pyqt进行gui开发/index.html">
 <meta property="og:site_name" content="技术笔记">
+<meta property="og:description" content="python 使用pyqt进行gui开发开发环境：MAC OS 10.12.3 版本 （当前最新）Pycharm 2016.3.2 版本 （当前最新）Python 3.6.0 版本 （当前最新）PyQt5 5.8.1 版本 （当前最新）pyinstaller：将python代码打包为可执行的exe文件。  exe文件给Windows用，但是本章不安装，但是不排除后期更新文章，因为博主还没入门，还没">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-9c75441ecb134087.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-50e801b6b7e1ad97.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-7da23e76cf9625ca.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-628658e11de16c28.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-f5cdf0dd05f8a23d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-552695464c023f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-89223a00b2e5f642.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-7922af36d350497c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-ad81e48ff0b86c31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-89223a00b2e5f642.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-8c5f71a464c731e0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-7d3ea06c65b20c0c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-9a1975d43763551b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-f268fa95007a3d78.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-6ad7f21083de78bd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-c428d1ac8c55a9a1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-31d8d906887690a0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-6b5e42dedb70b91a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-dd35ca434d53f0f5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/572">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-6dcac304a31a4564.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-ea357d69382e403e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/586">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-a03d932a07e5fb93.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-d9e1d248e352eb32.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2880699-386d0f4aeb33ac04.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:updated_time" content="2018-04-07T06:19:04.139Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="技术笔记">
+<meta name="twitter:title" content="python 使用pyqt进行gui开发">
+<meta name="twitter:description" content="python 使用pyqt进行gui开发开发环境：MAC OS 10.12.3 版本 （当前最新）Pycharm 2016.3.2 版本 （当前最新）Python 3.6.0 版本 （当前最新）PyQt5 5.8.1 版本 （当前最新）pyinstaller：将python代码打包为可执行的exe文件。  exe文件给Windows用，但是本章不安装，但是不排除后期更新文章，因为博主还没入门，还没">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2880699-9c75441ecb134087.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
   
   
     <link rel="icon" href="/favicon.png">
@@ -94,11 +123,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-
-    
-    <article id="post-python-使用pyqt进行gui开发" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-python-使用pyqt进行gui开发" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/07/python-使用pyqt进行gui开发/" class="article-date">
   <time datetime="2018-04-07T06:18:28.000Z" itemprop="datePublished">2018-04-07</time>
@@ -111,8 +136,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/07/python-使用pyqt进行gui开发/">python 使用pyqt进行gui开发</a>
+    <h1 class="article-title" itemprop="name">
+      python 使用pyqt进行gui开发
     </h1>
   
 
@@ -246,116 +271,20 @@
     </footer>
   </div>
   
-</article>
-
-
     
+<nav id="article-nav">
   
-
-    
-    <article id="post-android studio中找不到“sync the project with gradle files”按钮时的操作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/12/android studio中找不到“sync the project with gradle files”按钮时的操作/" class="article-date">
-  <time datetime="2018-01-12T09:45:46.000Z" itemprop="datePublished">2018-01-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/12/android studio中找不到“sync the project with gradle files”按钮时的操作/">android studio中找不到“sync the project with gradle files”按钮时的操作</a>
-    </h1>
+    <a href="/2018/01/12/android studio中找不到“sync the project with gradle files”按钮时的操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">android studio中找不到“sync the project with gradle files”按钮时的操作</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="android-studio中找不到“sync-the-project-with-gradle-files”按钮时的操作"><a href="#android-studio中找不到“sync-the-project-with-gradle-files”按钮时的操作" class="headerlink" title="android studio中找不到“sync the project with gradle files”按钮时的操作"></a>android studio中找不到“sync the project with gradle files”按钮时的操作</h4><hr>
-<ol>
-<li>打开Gradle工具窗口 <code>View -&gt; Tool Windows -&gt; Gradle</code></li>
-<li>使用开始宏录制 <code>Edit -&gt; Macros -&gt; Start Recording Macro</code></li>
-<li>在Gradle工具窗口中按下<code>Refresh all Gradle projects</code>按钮</li>
-<li>用宏停止宏录制 <code>Edit -&gt; Macros -&gt; Stop Recording Macro</code></li>
-<li>用名字保存宏 <code>Gradle sync</code></li>
-<li>在IntelliJ IDEA工具栏上用鼠标右键按下并选择 <code>Customize Menus and Toolbars...</code></li>
-<li>在<code>Main menu -&gt; Edit -&gt; Macros -&gt; Macro Actions</code>找到您的<code>Gradle sync</code>宏，选择它，然后按<code>Edit Action Icon...</code></li>
-<li>下载此图标<a href="http://developer.android.com/images/tools/sync-project.png" target="_blank" rel="noopener">同步项目与Gradle文件图标</a>（从文档<a href="http://developer.android.com/google/play-services/setup.html" target="_blank" rel="noopener">http://developer.android.com/google/play-services/setup.html</a>），并在IDEA对话框窗口中选择此图标</li>
-<li>现在在组中<code>Menus and Toolbars</code>选择最后一项<code>Main Toolbar</code>，按<code>Add After...</code>并选择<code>All actions -&gt; Macros -&gt; Gradle sync</code></li>
-<li>现在你有<code>Sync Project with Gradle Files</code>按钮！</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://yoursite.com/2018/01/12/android studio中找不到“sync the project with gradle files”按钮时的操作/" data-id="cjfozq16k0000e0rb4tha5dxb" class="article-share-link">Share</a>
-      
-
-      
-    </footer>
-  </div>
   
 </article>
 
-
-    
-  
-
-    
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/12/hello-world/" class="article-date">
-  <time datetime="2018-01-12T08:12:17.032Z" itemprop="datePublished">2018-01-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://yoursite.com/2018/01/12/hello-world/" data-id="cjfozq17w0001e0rb1sil26tw" class="article-share-link">Share</a>
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-    
-  
-  
 </section>
         
       </div>
