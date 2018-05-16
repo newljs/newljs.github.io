@@ -145,6 +145,9 @@ main,
 .post {
   margin-bottom: 2em;
   text-shadow: none;
+  border-bottom-style: dashed;
+  border-width: 1px;
+  padding-bottom: 30px;
 }
 .post > * {
   margin: 0;
