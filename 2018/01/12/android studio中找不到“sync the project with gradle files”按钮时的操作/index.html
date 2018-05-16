@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>
         
-            Hello World
+            android studio中找不到“sync the project with gradle files”按钮时的操作
         
     </title>
     <link rel="icon" href="/img/favicon.png"/>
@@ -80,8 +80,8 @@
     <main class="main">
         <article class="post">
             <h1>
-                <a class="title" href="/2018/01/12/hello-world/"> 
-                    Hello World 
+                <a class="title" href="/2018/01/12/android studio中找不到“sync the project with gradle files”按钮时的操作/"> 
+                    android studio中找不到“sync the project with gradle files”按钮时的操作 
                 </a>
             </h1>
             <div class="meta">
@@ -95,22 +95,22 @@
                     
             </div>
 <div class="toc">
-  <ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#Quick-Start"><span class="toc-list-text">Quick Start</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#Create-a-new-post"><span class="toc-list-text">Create a new post</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#Run-server"><span class="toc-list-text">Run server</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#Generate-static-files"><span class="toc-list-text">Generate static files</span></a></li><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#Deploy-to-remote-sites"><span class="toc-list-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  <ol class="toc-list"><li class="toc-list-item toc-list-level-4"><a class="toc-list-link" href="#android-studio中找不到“sync-the-project-with-gradle-files”按钮时的操作"><span class="toc-list-text">android studio中找不到“sync the project with gradle files”按钮时的操作</span></a></li></ol>
 </div>
             <div class="content">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h4 id="android-studio中找不到“sync-the-project-with-gradle-files”按钮时的操作"><a href="#android-studio中找不到“sync-the-project-with-gradle-files”按钮时的操作" class="headerlink" title="android studio中找不到“sync the project with gradle files”按钮时的操作"></a>android studio中找不到“sync the project with gradle files”按钮时的操作</h4><hr>
+<ol>
+<li>打开Gradle工具窗口 <code>View -&gt; Tool Windows -&gt; Gradle</code></li>
+<li>使用开始宏录制 <code>Edit -&gt; Macros -&gt; Start Recording Macro</code></li>
+<li>在Gradle工具窗口中按下<code>Refresh all Gradle projects</code>按钮</li>
+<li>用宏停止宏录制 <code>Edit -&gt; Macros -&gt; Stop Recording Macro</code></li>
+<li>用名字保存宏 <code>Gradle sync</code></li>
+<li>在IntelliJ IDEA工具栏上用鼠标右键按下并选择 <code>Customize Menus and Toolbars...</code></li>
+<li>在<code>Main menu -&gt; Edit -&gt; Macros -&gt; Macro Actions</code>找到您的<code>Gradle sync</code>宏，选择它，然后按<code>Edit Action Icon...</code></li>
+<li>下载此图标<a href="http://developer.android.com/images/tools/sync-project.png" target="_blank" rel="noopener">同步项目与Gradle文件图标</a>（从文档<a href="http://developer.android.com/google/play-services/setup.html" target="_blank" rel="noopener">http://developer.android.com/google/play-services/setup.html</a>），并在IDEA对话框窗口中选择此图标</li>
+<li>现在在组中<code>Menus and Toolbars</code>选择最后一项<code>Main Toolbar</code>，按<code>Add After...</code>并选择<code>All actions -&gt; Macros -&gt; Gradle sync</code></li>
+<li>现在你有<code>Sync Project with Gradle Files</code>按钮！</li>
+</ol>
 
             </div>
           
@@ -122,7 +122,7 @@
                 </div>
                 <div class="link">
                     <a>Link:</a>
-                    <a class="permalink" href="http://blog.liujunsheng.com/2018/01/12/hello-world/">http://blog.liujunsheng.com/2018/01/12/hello-world/</a>
+                    <a class="permalink" href="http://blog.liujunsheng.com/2018/01/12/android studio中找不到“sync the project with gradle files”按钮时的操作/">http://blog.liujunsheng.com/2018/01/12/android studio中找不到“sync the project with gradle files”按钮时的操作/</a>
                 </div>
                 <div class="license">
                     <a>Statement:</a>
@@ -160,11 +160,15 @@
 <div class="more">
 
     <div class="prev">
-   <a href="/2018/01/12/android studio中找不到“sync the project with gradle files”按钮时的操作/">  android studio中找不到“sync the project with gradle files”按钮时的操作</a>
+   <a href="/2018/04/07/python-使用pyqt进行gui开发/">  python 使用pyqt进行gui开发</a>
     </div>
 
 <div></div>
 
+    <div class="next">
+    <a href="/2018/01/12/hello-world/"> Hello World </a>
+    </div>
+    
 </div>
 
 <div class="bdsharebuttonbox">
@@ -187,7 +191,7 @@ window._bd_share_config={
 
 <script>
     var gitment = new Gitment({
-    id: "Fri Jan 12 2018 16:12:17 GMT+0800",
+    id: "Fri Jan 12 2018 17:45:46 GMT+0800",
     owner: "刘君盛",
     repo: "",
     oauth: {
