@@ -115,7 +115,7 @@ main,
 }
 .header .navbar .menu .menu-item {
   display: inline-block;
-  padding: 0.4em 0.8em;
+  padding: 0.4em 4em;
 }
 .header .navbar .menu .menu-item .menu-item-link {
   font-size: 0.8em;

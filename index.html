@@ -86,6 +86,47 @@
     
         <article class="post">
             <h1>
+                <a class="title" href="/2018/05/18/Android Studio升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法/"> 
+                    Android Studio升级3.1.2后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin”的解决方法 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2018-05-18   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Gradle/">Android Gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/升级/">升级</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>Configuration on demand is not supported by the current version of the Android Gradle plugin  </p>
+<h3 id="Android-Studio-升级3-1-2-后提示“Configuration-on-demand-is-not-supported-by-the-current-version-of-the-Android-Gradle-plugin-”的解决方法"><a href="#Android-Studio-升级3-1-2-后提示“Configuration-on-demand-is-not-supported-by-the-current-version-of-the-Android-Gradle-plugin-”的解决方法" class="headerlink" title="Android Studio 升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法"></a>Android Studio 升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法</h3><p>Android Studio 升级后3.1.2 后提示：</p>
+<blockquote>
+<p>Configuration on demand is not supported by the current version of the Android Gradle plugin since you are using Gradle version 4.6 or above. Suggestion: disable configuration on demand by setting org.gradle.configureondemand=false in your gradle.properties file or use a Gradle version less than 4.6. </p>
+</blockquote>
+<p>按照提示设置后发现并没有什么卵用，搜了一圈都在说需要降级，实在懒得降级，最后在stackoverflow上找了个方法，试了下，居然成了，这里给大家分享一下：</p>
+<p>第一步，删除gradle.properties 中的org.gradle.configureondemand </p>
+<p>第二部，打开<code>File</code> &gt; <code>Settings</code> &gt; <code>Build, Execution, Deployment</code> &gt; <code>Compiler</code>  取消需要的配置。</p>
+<p>第三部，成功。</p>
+
+                
+            </div>
+            <div class="continue">
+            <a href="/2018/05/18/Android Studio升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法/">
+            阅读全文            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
+        </article>
+        
+        <article class="post">
+            <h1>
                 <a class="title" href="/2018/05/16/python 更新/"> 
                     python更新 
                 </a>

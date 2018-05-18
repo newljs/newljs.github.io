@@ -5,20 +5,20 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>
         
-            python更新
+            Android Studio升级3.1.2后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin”的解决方法
         
     </title>
     <meta property="og:title" content="
         
-            python更新
+            Android Studio升级3.1.2后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin”的解决方法
         " />
     <meta itemProp="description" content="
         
-            刘君盛，互联网产品经理，从事过电商、医疗项目，略懂点技术，node，python，golang，php都能写点。
+            Android Studio 升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法
         " />
     <meta itemProp="keywords" content="
         
-            
+            Android Studio,Android Gradle,升级
         " />
     <link rel="icon" href="/img/favicon.png"/>
     <link rel="stylesheet" href="/css/style.css">
@@ -84,42 +84,38 @@
     <main class="main">
         <article class="post">
             <h1>
-                <a class="title" href="/2018/05/16/python 更新/"> 
-                    python更新 
+                <a class="title" href="/2018/05/18/Android Studio升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法/"> 
+                    Android Studio升级3.1.2后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin”的解决方法 
                 </a>
             </h1>
             <div class="meta">
                 <a class="date"> 
                     <i class="fa fa-calendar" aria-hidden="true"></i>                    
-                    2018-05-16   
+                    2018-05-18   
                 </a>
                 
                 
                 
-                    
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Gradle/">Android Gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/升级/">升级</a></li></ul>
             </div>
 <div class="toc">
-  <ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#python-更新"><span class="toc-list-text">python 更新</span></a></li></ol>
+  <ol class="toc-list"><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#Android-Studio-升级3-1-2-后提示“Configuration-on-demand-is-not-supported-by-the-current-version-of-the-Android-Gradle-plugin-”的解决方法"><span class="toc-list-text">Android Studio 升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法</span></a></li></ol>
 </div>
             <div class="content">
-                <h2 id="python-更新"><a href="#python-更新" class="headerlink" title="python 更新"></a>python 更新</h2><p>升级pip：</p>
-<pre><code>python -m pip install --upgrade pip
-</code></pre><a id="more"></a> 
-<p>列出刻更新的包：</p>
-<pre><code>pip list --outdate
-</code></pre><p>升级指定包(例如：requests)：</p>
-<pre><code>pip install --upgrade requests
-</code></pre><p>批量升级所有包：</p>
+                <p>Configuration on demand is not supported by the current version of the Android Gradle plugin  </p>
+<h3 id="Android-Studio-升级3-1-2-后提示“Configuration-on-demand-is-not-supported-by-the-current-version-of-the-Android-Gradle-plugin-”的解决方法"><a href="#Android-Studio-升级3-1-2-后提示“Configuration-on-demand-is-not-supported-by-the-current-version-of-the-Android-Gradle-plugin-”的解决方法" class="headerlink" title="Android Studio 升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法"></a>Android Studio 升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法</h3><p>Android Studio 升级后3.1.2 后提示：</p>
 <blockquote>
-<p>方式1，循环执行pip install –upgrade：</p>
+<p>Configuration on demand is not supported by the current version of the Android Gradle plugin since you are using Gradle version 4.6 or above. Suggestion: disable configuration on demand by setting org.gradle.configureondemand=false in your gradle.properties file or use a Gradle version less than 4.6. </p>
 </blockquote>
-<pre><code>import pip
-from subprocess import call
-for dist in pip.get_installed_distributions():
-call(&quot;pip install --upgrade &quot;+dist.project_name, shell=True)
-</code></pre><p>方式2，安装pip-review包</p>
-<pre><code>pip-review --local --interactive
-</code></pre>
+<p>按照提示设置后发现并没有什么卵用，搜了一圈都在说需要降级，实在懒得降级，最后在stackoverflow上找了个方法，试了下，居然成了，这里给大家分享一下：</p>
+<p>第一步，删除gradle.properties 中的org.gradle.configureondemand </p>
+<p>第二部，打开<code>File</code> &gt; <code>Settings</code> &gt; <code>Build, Execution, Deployment</code> &gt; <code>Compiler</code>  取消需要的配置。</p>
+<p>第三部，成功。</p>
+
             </div>
           
            
@@ -130,7 +126,7 @@ call(&quot;pip install --upgrade &quot;+dist.project_name, shell=True)
                 </div>
                 <div class="link">
                     <a>本文链接:</a>
-                    <a class="permalink" href="http://blog.liujunsheng.com/2018/05/16/python 更新/">http://blog.liujunsheng.com/2018/05/16/python 更新/</a>
+                    <a class="permalink" href="http://blog.liujunsheng.com/2018/05/18/Android Studio升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法/">http://blog.liujunsheng.com/2018/05/18/Android Studio升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法/</a>
                 </div>
                 <div class="license">
                     <a>版权声明:</a>
@@ -167,14 +163,10 @@ call(&quot;pip install --upgrade &quot;+dist.project_name, shell=True)
 
 <div class="more">
 
-    <div class="prev">
-   <a href="/2018/05/18/Android Studio升级3.1.2 后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin  ”的解决方法/"> 上一页:Android Studio升级3.1.2后提示“Configuration on demand is not supported by the current version of the Android Gradle plugin”的解决方法</a>
-    </div>
-
 <div></div>
 
     <div class="next">
-    <a href="/2018/04/07/python-使用pyqt进行gui开发/"> 下一页:python 使用pyqt进行gui开发 </a>
+    <a href="/2018/05/16/python 更新/"> 下一页:python更新 </a>
     </div>
     
 </div>
